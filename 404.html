@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>飞机坦克大战 - 在线多人对战</title>
+    <script>
+      // SPA routing fallback for GitHub Pages
+      // Store the current path and redirect to root
+      ;(function () {
+        var path = window.location.pathname
+        var hash = window.location.hash
+        var search = window.location.search
+        // Redirect to root with the original path stored in sessionStorage
+        sessionStorage.setItem('spa-redirect', path + search + hash)
+        window.location.replace('/plane-vs-tank/')
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>
