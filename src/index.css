@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply h-full w-full;
+  }
+  body {
+    @apply bg-game-bg text-slate-100 antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .game-panel {
+    @apply bg-game-panel/90 backdrop-blur-sm border border-slate-700 rounded-lg shadow-xl;
+  }
+  .game-btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-game-accent/50;
+  }
+  .game-btn-primary {
+    @apply game-btn bg-game-accent hover:bg-blue-600 text-white;
+  }
+  .game-btn-danger {
+    @apply game-btn bg-game-danger hover:bg-red-600 text-white;
+  }
+  .game-btn-secondary {
+    @apply game-btn bg-slate-700 hover:bg-slate-600 text-slate-100;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+}
